@@ -1,8 +1,19 @@
 #https://www.reddit.com/r/dailyprogrammer/comments/8jcffg/20180514_challenge_361_easy_tally_program/
 from collections import Counter
 import operator
+import string
+import random
 
-input = 'dbbaCEDbdAacCEAadcB'
+input = ''
+
+#Random input 
+random_input_length = 30
+for i in range(1, random_input_length):
+    input += random.choice(string.ascii_letters)
+
+#Challenge input
+#input = 'dbbaCEDbdAacCEAadcB'
+
 points_dict = Counter(input)
 total_points = {}
 
